@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Body Ink</title>
+
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Cinzel:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<div class="logo">Body Ink</div>
+
+<nav>
+<button onclick="openUpload()">Upload Tattoo</button>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Ink Your Identity</h1>
+<p>The Tattoo Community</p>
+</section>
+
+<!-- FILTERS -->
+<div class="filters">
+<button onclick="filterTattoo('all')">All</button>
+<button onclick="filterTattoo('female')">Female</button>
+<button onclick="filterTattoo('male')">Male</button>
+<button onclick="filterTattoo('small')">Small</button>
+<button onclick="filterTattoo('large')">Large</button>
+</div>
+
+<!-- GALLERY -->
+<div id="gallery" class="gallery"></div>
+
+<!-- UPLOAD MODAL -->
+<div id="uploadModal" class="modal">
+<div class="modal-content">
+
+<input id="artist" placeholder="Artist Name">
+<input id="image" placeholder="Image URL">
+
+<select id="category">
+<option value="female">Female</option>
+<option value="male">Male</option>
+<option value="small">Small</option>
+<option value="large">Large</option>
+</select>
+
+<button onclick="uploadTattoo()">Upload</button>
+<button onclick="closeUpload()">Close</button>
+
+</div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
